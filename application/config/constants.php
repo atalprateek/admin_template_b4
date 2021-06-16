@@ -85,7 +85,11 @@ defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automat
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 ///////////////////////////////////////////////
-$curyear = date('Y',strtotime(date('Y-m-d'))); 
+$startyear='2020';
+$curyear = date('Y');
+if($startyear<$curyear){
+    $curyear=$startyear.'-'.$curyear;
+}
 defined('PROJECT_NAME')        OR define('PROJECT_NAME','Admin Template'); 
 defined('OUR_BRAND')       	   OR define('OUR_BRAND',"Brightcode Software Services Pvt Ltd.");
 defined('SESSION_YEAR')        OR define('SESSION_YEAR',"$curyear");
@@ -96,8 +100,8 @@ defined('NTYPE')                 OR define('NTYPE',"toastr"); //Notification Typ
 //////////////////////////////////////////////
 /*--------------Template Colors-------------*/
 //////////////////////////////////////////////
-defined('ACCENT_COLOR')        OR define('ACCENT_COLOR',"accent-danger");
-defined('NAVBAR_COLOR')        OR define('NAVBAR_COLOR',"navbar-light navbar-warning");
+defined('ACCENT_COLOR')        OR define('ACCENT_COLOR',"accent-sucess");
+defined('NAVBAR_COLOR')        OR define('NAVBAR_COLOR',"navbar-light navbar-success");
 defined('BRAND_COLOR')         OR define('BRAND_COLOR',"navbar-light");
 defined('SIDEBAR_COLOR')       OR define('SIDEBAR_COLOR',"sidebar-dark-warning");
 //////////////////////////////////////////////
